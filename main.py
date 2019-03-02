@@ -201,7 +201,7 @@ class Client(Server):
             self.ftp.storbinary("STOR " + filename, open(self.cwd / filename, "rb"))
         except:
             # Create directory(s) if non existent
-            logging.debug("Missing file(s) on remote: " + fileename)
+            logging.debug("Missing file(s) on remote: " + filename)
             tmp_list = os.path.dirname(filename).split("/")
             if len(tmp_list) == 1:
                 tmp_list = tmp_list[0].split("\\")

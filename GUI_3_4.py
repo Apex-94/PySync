@@ -31,7 +31,7 @@ def create_window():
         window = Tk()
         window.configure(background="#a1dbcd")
         window.title("Set Path")
-        root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
+        window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
         label4 = Label( window, text="Enter path User 1:",fg="#383a39",bg="#a1dbcd")
         E4 = Entry(window, bd =5)
         label5 = Label( window, text="Enter path User 2:",fg="#383a39",bg="#a1dbcd")

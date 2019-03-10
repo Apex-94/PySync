@@ -24,7 +24,7 @@ def printpath():
 root = Tk() #For 1st window
 root.configure(background="#a1dbcd")
 root.title("Set IP")
-root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
+root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')#path to icon file
 
     
 def create_window():
@@ -32,7 +32,7 @@ def create_window():
         window = Tk()#For 2nd window
         window.configure(background="#a1dbcd")
         window.title("Set Path")
-        window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
+        window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')#path to icon file
         label4 = Label( window, text="Enter path User 1:",fg="#383a39",bg="#a1dbcd")
         E4 = Entry(window, bd =5)
         label5 = Label( window, text="Enter path User 2:",fg="#383a39",bg="#a1dbcd")

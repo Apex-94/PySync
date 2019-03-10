@@ -10,7 +10,7 @@ def printIP():
     user_ip.append(E1.get())
     user_ip.append(E2.get())
     user_ip.append(E3.get())
-    print(*user_ip) #just to check
+    print(*user_ip) #just to check input
 def cleartb2():
     E4.delete(0, END)
     E5.delete(0, END)
@@ -19,12 +19,12 @@ def printpath():
     user_path.append(E4.get())
     user_path.append(E5.get())
     user_path.append(E6.get())
-    print(*user_path) #just to check
+    print(*user_path) #just to check input
 
 root = Tk() #For 1st window
 root.configure(background="#a1dbcd")
 root.title("Set IP")
-root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
+root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')#path to icon file
 
     
 def create_window():
@@ -32,7 +32,7 @@ def create_window():
         window = Tk()#For 2nd window
         window.configure(background="#a1dbcd")
         window.title("Set Path")
-        window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
+        window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')#path to icon file
         label4 = Label( window, text="Enter path User 1:",fg="#383a39",bg="#a1dbcd")
         E4 = Entry(window, bd =5)
         label5 = Label( window, text="Enter path User 2:",fg="#383a39",bg="#a1dbcd")

@@ -2,6 +2,15 @@ from functools import partial
 from tkinter import *
 user_ip=[]
 user_path=[]
+def create_gif():
+        gif_window=Toplevel()
+        gif_window.configure(background="#a1dbcd")
+        gif_window.title("Set Path")
+        photo =PhotoImage(file = r'C:\Users\User\Desktop\syncing.gif')
+        label =Label(gif_window,image = photo)
+        label.pack()
+        gif_window.after(5000, lambda: gif_window.destroy())
+        gif_window.mainloop()
 def cleartb():
     E1.delete(0, END)
     E2.delete(0, END)
@@ -16,6 +25,7 @@ def cleartb2():
     E5.delete(0, END)
     E6.delete(0, END)
 def printpath():
+    create_gif()
     user_path.append(E4.get())
     user_path.append(E5.get())
     user_path.append(E6.get())
@@ -24,15 +34,14 @@ def printpath():
 root = Tk() #For 1st window
 root.configure(background="#a1dbcd")
 root.title("Set IP")
-root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')#path to icon file
-
-    
+root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
+           
 def create_window():
         global user_path
-        window = Tk()#For 2nd window
+        window = Toplevel()#For 2nd window
         window.configure(background="#a1dbcd")
         window.title("Set Path")
-        window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')#path to icon file
+        window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
         label4 = Label( window, text="Enter path User 1:",fg="#383a39",bg="#a1dbcd")
         E4 = Entry(window, bd =5)
         label5 = Label( window, text="Enter path User 2:",fg="#383a39",bg="#a1dbcd")
@@ -52,6 +61,7 @@ def create_window():
         Delete_button.pack()
         window.geometry("300x250")
         window.mainloop()
+
 
 label1 = Label( root, text="Enter IP user 1:",fg="#383a39",bg="#a1dbcd")
 E1 = Entry(root, bd =5)

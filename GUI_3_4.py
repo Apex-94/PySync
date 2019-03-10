@@ -28,6 +28,7 @@ root.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
 
     
 def create_window():
+        global user_path
         window = Tk()#For 2nd window
         window.configure(background="#a1dbcd")
         window.title("Set Path")

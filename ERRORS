@@ -1,0 +1,7 @@
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python37\lib\tkinter\__init__.py", line 1705, in __call__
+    return self.func(*args)
+  File "C:\Users\User\Desktop\gui6.py", line 60, in browse_button
+    Server_window.pathlabel.config(text=filename)
+AttributeError: 'function' object has no attribute 'pathlabel'

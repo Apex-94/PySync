@@ -5,7 +5,7 @@ from tkinter import Menu
 window = Tk()
 pathlabel=Label()
 pathlist=[]
-class ToolTip(object):
+class ToolTip(object):#TO DISPLAY MESSAGE WHEN MOUSE IS HOVERING ON THE BUTTON
 
     def __init__(self, widget):
         self.widget = widget
@@ -42,7 +42,7 @@ class ToolTip(object):
         if tw:
             tw.destroy()
 
-def createToolTip(widget, text):
+def createToolTip(widget, text):#CREATES THE INFO HOVER THING
     toolTip = ToolTip(widget)
     def enter(event):
         toolTip.showtip(text)
@@ -51,23 +51,24 @@ def createToolTip(widget, text):
     widget.bind('<Enter>', enter)
     widget.bind('<Leave>', leave)
     
-def DisplayDir(Var):
+def DisplayDir(Var):#NOT USED
     feedback = filedialog.askdirectory()
     Var.set(feedback)
     
-def browse_button():
+def browse_button():#CHANGES SERVER LABEL TO THE BROWSE FOLDER SELECTED
     filename = filedialog.askdirectory()
-    Server_window.pathlabel.config(text=filename)
-    pathlist.append=filename
+    pathlabel.config(text=filename)
+    pathlist.append(filename)
     print(*pathlist)
     
 
 def Server_window():
+    global pathlabel
     window_server=Toplevel()
     window_server.configure(background="#a1dbcd")
     window_server.title("Server")
     window.wm_iconbitmap(r'C:\Users\User\Desktop\icon2.ico')
-    Browse_button = Button(window_server, text = 'Select folder',width=10,height=1,command=browse_button).place(x=250,y=100)
+    Browse_button = Button(window_server, text = 'Select folder',width=10,height=1,command=browse_button).place(x=400,y=100)
     pathlabel= Label(window_server)
     pathlabel.place(x=100,y=100)
     window_server.geometry("600x300")

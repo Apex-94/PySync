@@ -5,3 +5,5 @@ Traceback (most recent call last):
   File "C:\Users\User\Desktop\gui6.py", line 60, in browse_button
     Server_window.pathlabel.config(text=filename)
 AttributeError: 'function' object has no attribute 'pathlabel'
+                              FIXED
+                              Ans:Declare as global variable
